@@ -1,0 +1,49 @@
+html, body, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+#slider {
+  position: relative ;
+  margin: 0 auto;
+  width: 700px;
+}
+#slider .photos {
+  margin-top: 50px;
+  position: relative;
+}
+#slider .photos img {
+  width: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: 1s;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+  0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#slider .photos img.showed{
+opacity: 1;
+}
+
+.prev,
+.next {
+
+  width: 30px;
+  height: 40px;
+  border: orange 2px solid;
+  border-radius: 5px; 
+  position: absolute;
+  top: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.prev{
+left: -50px;
+}
+.next {
+right: -50px;
+}
+
+

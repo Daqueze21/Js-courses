@@ -1,0 +1,44 @@
+html, body, ul, li {
+  margin: 0;
+  padding: 0;
+}
+#slider {
+  position: relative ;
+  margin: 0 auto;
+  width: 600px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+#slider .photos img {
+  width: 100%;
+  display: none;
+}
+#slider .photos img:first-child {
+  display: block;
+}
+
+.buttons{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-self: center;
+}
+.prev,
+.next {
+  margin: 20px 0 20px 0;
+  width: 30px;
+  height: 40px;
+  border: orange 2px solid;
+  border-radius: 5px; 
+  position: absolute;
+  top: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+
+.prev{
+left: -50px;
+}
+.next {
+right: -50px;
+}

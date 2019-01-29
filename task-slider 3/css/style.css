@@ -1,0 +1,108 @@
+html, body, ul, li {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: linear-gradient(to right top, #000044, #002764, #00467d, #006690, #0086a0, #0099a9, #00adab, #00bfa6, #00c99c, #00d38d, #00db77, #03e35b);
+}
+
+#slider {
+  margin: 50px auto;
+  height: 420px;
+  width: 400px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+  0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 1px solid lightseagreen;
+  border-radius: 10px; 
+  
+}
+#slider .slider {
+  position: relative;
+  display: flex;
+  justify-content: center;
+} 
+
+#slider .slider img {
+  position: absolute;
+  padding: 20px;
+  height: 380px;
+  opacity: 0;
+  transition: all ease 1s; 
+  z-index: 20;
+}
+#slider .slider img.showed {
+  opacity: 1;
+}
+
+#slider .slider img.next-player {
+  position: absolute;
+  padding: 20px;
+  height: 380px;
+  opacity: 0.8;
+  transition: all ease 1s;
+  left: 400px; 
+  z-index: 19;
+}
+
+#slider .slider img.prev-player {
+  position: absolute;
+  padding: 20px;
+  height: 380px;
+  opacity: 0.8;
+  transition: all ease 1s;
+  right: 400px;
+  z-index: 19;
+}
+
+
+
+
+
+
+
+
+.button-prev,
+.button-next {
+  position: absolute;
+  width: 25px;
+  height: 40px;
+  border: orange 2px solid;
+  border-radius: 5px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+.button-prev {
+  top: 200px;
+  left: 100px;
+}
+.button-next {
+  top: 200px;
+  right: 100px;
+}
+.button-prev img,
+.button-next img {
+  height: 19px;
+}
+
+
+.footer{
+  display: flex;
+  font-family: 'Courier New', Courier, monospace;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10%;
+}
+
+.footer h1{
+  font: 500;
+  font-size: 25px;
+  color:wheat}
+.footer img {
+  width: 100px;
+}
+
+
+
