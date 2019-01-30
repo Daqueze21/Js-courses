@@ -27,7 +27,7 @@ console.log(images);
 let i = 0;
 
 btn_prev.onclick = function () {
-  images[i].className = "next-player";
+  images[i].className = "";
   i--;
 
   if (i < 0) {
