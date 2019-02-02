@@ -13,8 +13,7 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
   0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border: 1px solid lightseagreen;
-  border-radius: 10px; 
-  
+  border-radius: 10px;  
 }
 #slider .slider {
   position: relative;
@@ -26,40 +25,31 @@ body {
   position: absolute;
   padding: 20px;
   height: 380px;
-  opacity: 0;
-  transition: all ease 1s; 
+  opacity: 0; 
   z-index: 20;
 }
 #slider .slider img.showed {
   opacity: 1;
 }
 
-#slider .slider img.next-player {
-  position: absolute;
-  padding: 20px;
-  height: 380px;
-  opacity: 0.8;
-  transition: all ease 1s;
-  left: 400px; 
-  z-index: 19;
-}
-
+#slider .slider img.next-player,
 #slider .slider img.prev-player {
   position: absolute;
   padding: 20px;
   height: 380px;
   opacity: 0.8;
   transition: all ease 1s;
-  right: 400px;
+}
+
+#slider .slider img.next-player {
+  left: 450px;
   z-index: 19;
 }
 
-
-
-
-
-
-
+#slider .slider img.prev-player {
+  right: 450px;
+  z-index: 19;
+}
 
 .button-prev,
 .button-next {
@@ -73,19 +63,21 @@ body {
   align-items: center;
   position: absolute;
 }
+
 .button-prev {
   top: 200px;
   left: 100px;
 }
+
 .button-next {
   top: 200px;
   right: 100px;
 }
+
 .button-prev img,
 .button-next img {
   height: 19px;
 }
-
 
 .footer{
   display: flex;
@@ -99,7 +91,9 @@ body {
 .footer h1{
   font: 500;
   font-size: 25px;
-  color:wheat}
+  color:wheat
+}
+
 .footer img {
   width: 100px;
 }

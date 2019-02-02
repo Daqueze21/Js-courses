@@ -1,70 +1,115 @@
-/*const div = document.querySelector("#text");
-div.onclick = function () {
-  div.innerHTML = "6789";
-  div.className = "test";
-  div.style.color = "#F15";
-  div.style.fontSize = "27px";
-}*/
 
-/*const slides = document.querySelectorAll(".slider_img");
-console.log(slides);
-let slider = [];
-
-for (let i = 0; i < slides.length; i++) {
-  slider[i] = slides[i].src;
-  slides[i].remove();
-}
-console.log(slider);
-
-let step = 0;
-let offset = 0;
-*/
 const btn_prev = document.querySelector("#slider .slider-buttons .button-prev");
 const btn_next = document.querySelector("#slider .slider-buttons .button-next");
 
 const images = document.querySelectorAll("#slider .slider img");
+const images_length = images.length;
 console.log(images);
-let i = 0;
+let i = 2;
+
+
 
 btn_prev.onclick = function () {
-  images[i].className = "";
-  i--;
+  if (i == 0) {
+    images[i].classList.remove("showed");
+    images[i].classList.add("next-player");
 
-  if (i < 0) {
-    i = images.length - 1;
-  };
+    images[i + 1].classList.remove("next-player");
 
-  images[i].className = "showed";
-  
+    images[images_length - 1].classList.remove("prev-player");
+    images[images_length - 1].classList.add("showed");
+
+    images[images_length - 2].classList.add("prev-player");
+
+    i = images_length -1; 
+  } else if (i == 1) {
+    images[i].classList.remove("showed");
+    images[i].classList.add("next-player");
+
+    images[i + 1].classList.remove("next-player");
+
+    images[i - 1].classList.remove("prev-player");
+    images[i - 1].classList.add("showed");
+
+    images[images_length - 1].classList.add("prev-player");
+
+    i--;
+  } else if (i == images_length - 1) {
+    images[i].classList.remove("showed");
+    images[i].classList.add("next-player");
+
+    images[0].classList.remove("next-player");
+
+    images[i - 1].classList.remove("prev-player");
+    images[i - 1].classList.add("showed");
+
+    images[i - 2].classList.add("prev-player");
+
+    i--;
+  } else {
+    images[i].classList.remove("showed");
+    images[i].classList.add("next-player");
+
+    images[i + 1].classList.remove("next-player");
+
+    images[i - 1].classList.remove("prev-player");
+    images[i - 1].classList.add("showed");
+
+    images[i - 2].classList.add("prev-player");
+
+    i--;
+  }
 };
 
-
 btn_next.onclick = function () {
-  images[i].className = "";
+  if (i == images_length-2) {
+    images[i].classList.remove("showed");
+    images[i].classList.add("prev-player");
+
+    images[i - 1].classList.remove("prev-player");
+
+    images[i + 1].classList.remove("next-player");
+    images[i + 1].classList.add("showed");
+
+    images[0].classList.add("next-player");
     i++;
-  
-  if (i >= images.length) {
+  } else if (i == images_length - 1) {
+    images[i].classList.remove("showed");
+    images[i].classList.add("prev-player");
+
+    images[images_length - 2].classList.remove("prev-player");
+
+    images[0].classList.remove("next-player");
+    images[0].classList.add("showed");
+
+    images[1].classList.add("next-player");
+
     i = 0;
-  };
-  
-  images[i].className = "showed";
-  };
+  } else if (i == 0) {
+    images[i].classList.remove("showed");
+    images[i].classList.add("prev-player");
 
+    images[images_length - 1].classList.remove("prev-player");
 
+    images[i + 1].classList.remove("next-player");
+    images[i + 1].classList.add("showed");
 
+    images[i + 2].classList.add("next-player");
+    
+    i++;
+  } else{
+    images[i].classList.remove("showed");
+    images[i].classList.add("prev-player");
 
+    images[i - 1].classList.remove("prev-player");
 
+    images[i + 1].classList.remove("next-player");
+    images[i + 1].classList.add("showed");
 
+    images[i + 2].classList.add("next-player");
 
-/*const slides = document.querySelector("slider_img");
-console.log(slides);
-let current = 0;
-
-function slider() {
-  for (let i = 0; i < slides.length; i++) {
-    slider[i] = slides[i].src;
-    slides[i].remove();
+    i++;
   }
-  console.log(slider);
 }
-*/
+
+
